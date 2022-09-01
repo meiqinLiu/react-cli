@@ -2,5 +2,10 @@
   "name": "react-cli",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "browserslist": [
+    "last 2 versions",
+    "1 >%",
+    "not dead"
+  ]
 }
