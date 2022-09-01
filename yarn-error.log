@@ -1,0 +1,36 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\yarn\bin\yarn.js init
+
+PATH: 
+  C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;D:\Program Files\nvm;C:\Program Files\nodejs;C:\Program Files\Git\cmd;C:\Program Files\nodejs\node_global;;D:\Program Files (x86)\Tencent\微信web开发者工具\dll;C:\Users\易点数科产研\AppData\Local\Microsoft\WindowsApps;D:\Program Files\Microsoft VS Code\bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  12.22.10
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: canceled
+      at Interface.<anonymous> (D:\Program Files\nvm\v12.22.10\node_modules\yarn\lib\cli.js:137150:13)
+      at Interface.emit (events.js:314:20)
+      at Interface._ttyWrite (readline.js:868:16)
+      at ReadStream.onkeypress (readline.js:205:10)
+      at ReadStream.emit (events.js:314:20)
+      at emitKeys (internal/readline/utils.js:335:14)
+      at emitKeys.next (<anonymous>)
+      at ReadStream.onData (readline.js:1137:36)
+      at ReadStream.emit (events.js:314:20)
+      at addChunk (_stream_readable.js:297:12)
+
+npm manifest: 
+  No manifest
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
