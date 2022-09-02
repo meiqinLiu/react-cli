@@ -1,6 +1,7 @@
 const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const ESlintPlugin = require('eslint-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 function getStyleLoaders(val) {
     return  [
@@ -39,10 +40,6 @@ module.export = {
            {
              test: /\.less$/,
              use: getStyleLoaders('less-loader')
-           },
-           {
-             test: /\.s[ac]ss$/,
-             use: getStyleLoaders('sass-loader')
            },
            {
              test: /\.styl$/,
@@ -101,6 +98,9 @@ module.export = {
         runtimeChunk: {
             name: (entrypoint) => `runtime~~${entrypoint.name}.js`
         }
+    },
+    resolve: {
+        extensions: ['./jsx','./js','./less']
     },
     // 开发环境配置
     devServer: {
