@@ -25,9 +25,11 @@ function getStyleLoaders(val) {
 module.exports = {
     entry: './src/main.js',
     output: {
+        path: path.resolve(__dirname, 'dist'),
         filename: 'static/js/[contenthash:10].js',
         chunkFilename: 'static/js/[contenthash:10].chunk.js',
         assetModuleFilename: 'static/media/[contenthash:10][ext][query]',
+        clean: true
     },
     module: {
         rules: [
@@ -87,7 +89,7 @@ module.exports = {
             template: path.resolve(__dirname, '../public/index.html')
         })
     ],
-    mode: 'development',
+    mode: 'production',
     devtool: 'cheap-module-source-map',
     // 代码分割打包
     optimization: {
@@ -105,10 +107,10 @@ module.exports = {
         }
     },
     // 开发环境配置
-    devServer: {
-        host: 'localhost',
-        port: 3000,
-        // open: true,
-        hot: true,
-    }
+    // devServer: {
+    //     host: 'localhost',
+    //     prot: 3000,
+    //     open: true,
+    //     hot: true,
+    // }
 }
