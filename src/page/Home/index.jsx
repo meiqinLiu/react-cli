@@ -1,10 +1,10 @@
 import React from 'react'
-import './index.less'
+import './index.css'
 
-function Index() {
+function Home() {
     return <div className='home'>
         <h2 className='title'>home~~~</h2>
     </div>
 }
 
-export default Index
+export default Home

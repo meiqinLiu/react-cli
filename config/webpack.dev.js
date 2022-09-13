@@ -2,10 +2,12 @@ const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const ESlintPlugin = require('eslint-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+// const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 
 function getStyleLoaders(val) {
     return  [
-        MiniCssExtractPlugin.loader,
+        // MiniCssExtractPlugin.loader,
+       'style-loader',
        'css-loader',
       //  css兼容性配置，需要再package.json文件配置浏览器兼容成度
        {
@@ -69,6 +71,8 @@ module.exports = {
                     options: {
                         cacheDirectory: true,
                         cacheCompression: false,
+                        // plugins: [require.resolve('react-refresh/babel')], // 激活js的HMR
+                        // plugins: [ 'react-refresh/babel'], // 激活js的HMR
                     }
                 }
             }
@@ -85,7 +89,8 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, '../public/index.html')
-        })
+        }),
+        // new ReactRefreshWebpackPlugin() // 激活js的HMR
     ],
     mode: 'development',
     devtool: 'cheap-module-source-map',
@@ -110,5 +115,6 @@ module.exports = {
         port: 3000,
         // open: true,
         hot: true,
-    }
+    },
+    target: "web", // 枚举
 }
